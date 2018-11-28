@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset='utf-8'>
+		<title>Assignment 1 - D3 Workout Pt. 1</title>
+		<script type='text/javascript' src='https://d3js.org/d3.v5.min.js'></script>
+	</head>
+	<body>
+		<!-- <style>
+	    path {
+	      fill: #ccc;
+	      stroke: #fff;
+	      stroke-linejoin: round;
+	    }
+		</style> -->
+		<svg width="1200" height="1200">
+
+		</svg>
+
+	<script type='text/javascript'> {
+
+		var projection = d3.geoMercator().fitSize([width, height], 'GIS stuff data/AdministrativeBoundaryNationGeoJSON/bgd_admbnda_adm0_bbs_20180410.geojson');
+		var path = d3.geoPath().projection(projection);
+
+		g.selectAll('path')
+  			.data(geojson.features)
+  			.enter()
+  			.append('path')
+  			.attr('d', path)
+  			.style("fill", "red")
+  			.style("stroke-width", "1")
+  			.style("stroke", "black");
+
+		});
+
+	}
+	</script>
+
+	</body>
+</html>
